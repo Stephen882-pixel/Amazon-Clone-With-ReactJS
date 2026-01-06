@@ -1,0 +1,30 @@
+.home {
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.home__image {
+    width: 100%;
+    display: block;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0));
+}
+
+/* Alternative: Bottom fade only */
+.home::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to bottom, transparent, white);
+    pointer-events: none;
+}
+
+/* Optional: Add subtle shadow for depth */
+.home__image {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
