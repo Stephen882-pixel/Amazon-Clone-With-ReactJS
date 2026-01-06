@@ -10,6 +10,8 @@
     display: block;
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0));
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0));
+    z-index:-1;
+    margin-bottom: -150px;
 }
 
 /* Alternative: Bottom fade only */
@@ -27,4 +29,8 @@
 /* Optional: Add subtle shadow for depth */
 .home__image {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.home__row{
+    display: flex;
 }
