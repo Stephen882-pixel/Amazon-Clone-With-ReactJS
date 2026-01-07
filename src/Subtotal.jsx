@@ -13,9 +13,9 @@ function Subtotal() {
       <NumericFormat
         value={total}
         decimalScale={2}
-        displayType="text"
-        thousandSeparator
-        prefix="$"
+        displayType={"text"}
+        thousandSeparator={true}
+        prefix={"$"}
         renderText={(value) => (
           <>
             <p>
