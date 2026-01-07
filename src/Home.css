@@ -1,52 +1,70 @@
+/* ===============================
+   SAFETY: PREVENT HORIZONTAL SCROLL
+   (Does NOT affect desktop layout)
+================================ */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* ===============================
+   HOME CONTAINER (UNCHANGED)
+================================ */
 .home {
-    max-width: 1500px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
 }
 
+/* ===============================
+   HERO IMAGE (UNCHANGED DESKTOP)
+================================ */
 .home__image {
-    width: 100%;
-    display: block;
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0));
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0));
-    z-index:-1;
-    margin-bottom: -150px;
+  width: 100%;
+  display: block;
+  z-index: -1;
+  margin-bottom: -150px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 60%,
+    rgba(0, 0, 0, 0)
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 60%,
+    rgba(0, 0, 0, 0)
+  );
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Alternative: Bottom fade only */
+/* Fade overlay */
 .home::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 150px;
-    background: linear-gradient(to bottom, transparent, white);
-    pointer-events: none;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to bottom, transparent, white);
+  pointer-events: none;
 }
 
-/* Optional: Add subtle shadow for depth */
-.home__image {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.home__row{
-    display: flex;
-    z-index: 1;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-/* PRODUCT ROW */
+/* ===============================
+   PRODUCT ROWS (UNCHANGED DESKTOP)
+================================ */
 .home__row {
   display: flex;
   z-index: 1;
-  margin: 0 5px;
-  gap: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
-/* 📱 MOBILE RESPONSIVENESS */
+/* ===============================
+   MOBILE ONLY FIXES
+================================ */
 @media (max-width: 768px) {
   .home {
     padding: 0 10px;
@@ -58,13 +76,8 @@
     margin: 0;
   }
 
-  /* Hero image adjustment */
+  /* Reduce hero overlap */
   .home__image {
     margin-bottom: -80px;
-    mask-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 1) 75%,
-      rgba(0, 0, 0, 0)
-    );
   }
 }
