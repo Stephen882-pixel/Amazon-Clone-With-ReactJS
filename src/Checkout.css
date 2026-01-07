@@ -3,6 +3,7 @@
   padding: 20px;
   background-color: white;
   height: max-content;
+  gap: 20px;
 }
 
 /* LEFT COLUMN */
@@ -17,4 +18,24 @@
   background-color: #f3f3f3;
   border: 1px solid lightgray;
   height: fit-content;
+}
+
+/* 📱 MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+  .checkout {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .checkout__left,
+  .checkout__right {
+    flex: 1;
+    width: 100%;
+  }
+
+  .checkout__ad {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
 }

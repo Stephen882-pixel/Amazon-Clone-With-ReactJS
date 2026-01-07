@@ -69,3 +69,40 @@
     border: none;
     width: 100%;
 }
+
+/* 📱 MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+  }
+
+  /* Logo */
+  .header__logo {
+    margin: 10px;
+    width: 80px;
+  }
+
+  /* Search takes full width */
+  .header__search {
+    order: 3;
+    width: 100%;
+    margin: 10px;
+  }
+
+  /* Nav items */
+  .header__nav {
+    order: 2;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  /* Reduce clutter */
+  .header__optionLineOne {
+    display: none;
+  }
+
+  .header__optionLineTwo {
+    font-size: 12px;
+  }
+}

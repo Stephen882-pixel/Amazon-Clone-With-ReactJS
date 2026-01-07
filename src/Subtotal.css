@@ -1,29 +1,51 @@
-.subtotal{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100px;
-    padding: 20px;
-    background-color: #f3f3f3;
-    border: 1px solid #dddddd;
+.subtotal {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  background-color: #f3f3f3;
+  border: 1px solid #dddddd;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.subtotal__gift{
-    display: flex;
-    align-items: center;
+/* Gift checkbox */
+.subtotal__gift {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
 }
 
-.subtotal__gift > input{
-    margin-right: 5px;
+.subtotal__gift > input {
+  margin-right: 6px;
 }
 
-.subtotal > button{
-    background: #f0c14b;
-    border-radius: 2px;
-    width: 100%;
-    height: 30px;
-    border: 1px solid;
-    margin-top: 10px;
-    border-color: #a88734 #9c7e31 #846a29;
-    color: #111;
+/* Button */
+.subtotal > button {
+  background: #f0c14b;
+  border-radius: 2px;
+  width: 100%;
+  height: 36px;
+  border: 1px solid;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Button hover */
+.subtotal > button:hover {
+  background: #ddb347;
+}
+
+
+@media (max-width: 480px) {
+  .subtotal {
+    padding: 15px;
+  }
+
+  .subtotal > button {
+    height: 40px;
+    font-size: 15px;
+  }
 }
